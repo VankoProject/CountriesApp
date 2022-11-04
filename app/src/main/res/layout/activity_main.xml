@@ -15,6 +15,7 @@
         android:layout_marginStart="@dimen/margin_start_app"
         android:layout_marginTop="@dimen/margin_top_app"
         android:hint="@string/hint_edit_text_country"
+        android:autofillHints=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/search_button"/>
