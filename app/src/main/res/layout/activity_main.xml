@@ -4,15 +4,124 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
     tools:context=".MainActivity">
 
-    <TextView
+
+    <EditText
+        android:id="@+id/country_name_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_app"
+        android:layout_marginTop="@dimen/margin_top_app"
+        android:hint="@string/hint_edit_text_country"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/search_button"/>
+
+    <Button
+        android:id="@+id/search_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/name_of_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/country_name_edit_text"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="120dp"
+        tools:srcCompat="@tools:sample/avatars"
+        app:layout_constraintStart_toStartOf="@+id/country_name_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/country_name_edit_text"
+        android:layout_marginTop="@dimen/margin_top_app"/>
+
+    <TextView
+        android:id="@+id/country_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_app"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+    
+    <TextView
+        android:id="@+id/capital_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Столица"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/country_text_view"
+        app:layout_constraintTop_toBottomOf="@id/country_text_view"
+        android:layout_marginTop="@dimen/margin_top_app"/>
+    
+    <TextView
+        android:id="@+id/capital_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/capital_text_view"
+        app:layout_constraintBottom_toBottomOf="@id/capital_text_view"
+        android:layout_marginStart="@dimen/margin_start_app"/>
+
+    <TextView
+        android:id="@+id/population_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Население"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/population_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/population_text_view"
+        app:layout_constraintTop_toTopOf="@+id/population_text_view" />
+
+    <TextView
+        android:id="@+id/square_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Площадь"
+        app:layout_constraintStart_toStartOf="@+id/population_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/population_text_view" />
+
+    <TextView
+        android:id="@+id/square_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/square_text_view"
+        app:layout_constraintTop_toTopOf="@+id/square_text_view" />
+
+    <TextView
+        android:id="@+id/language_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Языки"
+        app:layout_constraintStart_toStartOf="@+id/square_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/square_text_view" />
+
+    <TextView
+        android:id="@+id/language_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/square_name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/square_name_text_view" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
